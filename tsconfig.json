@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "target": "es6",
+        "removeComments": false,
+        "noImplicitAny": true,
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedLocals": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true
+    },
+    "include": ["src"]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "hemoji",
+  "version": "0.1.0",
+  "description": "Visual hashing using emojis",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "npm run build:clean && npm run build:lib && npm run build:types",
+    "build:clean": "rimraf ./dist/",
+    "build:lib": "esbuild src/index.ts --bundle --minify --outdir=./dist/",
+    "build:types": "cp ./src/index.d.ts ./dist/index.d.ts",
+    "type-check": "tsc",
+    "lint": "eslint src/**/*",
+    "test": "jest",
+    "prepare": "npm run type-check && npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keraf/hemoji.git"
+  },
+  "keywords": [
+    "emoji",
+    "hash",
+    "library"
+  ],
+  "author": {
+    "name": "Rafael Keramidas",
+    "email": "rafael@keramid.as",
+    "url": "https://rafael.keramid.as/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.0.1",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "esbuild": "^0.8.38",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.3"
+  }
+}
