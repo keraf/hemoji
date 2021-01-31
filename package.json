@@ -2,12 +2,11 @@
   "name": "hemoji",
   "version": "0.1.1",
   "description": "Visual hashing using emojis",
-  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "exports": {
     ".": {
-      "require":  "./dist/index.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.esm.js"
     }
   },
