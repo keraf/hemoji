@@ -1,7 +1,14 @@
+<center>
+
 # Hemoji
 ## Turn a string into a visual hash made of emojis ⏮️ 📁 👾 🍐
+![Version](https://img.shields.io/npm/v/hemoji) ![Downloads](https://img.shields.io/npm/dt/hemoji) ![License](https://img.shields.io/npm/l/hemoji) ![Issues](https://img.shields.io/github/issues-raw/keraf/hemoji) ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/hemoji)
 
-Hemoji is a small library to turn strings into a hash of emojis. Just like hashes, two identical strings passed through Hemoji will produce the same result. 
+[![Hemoji on NPM](https://nodei.co/npm/hemoji.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/hemoji)
+
+</center>
+
+Hemoji is a small library to turn strings into a hash of emojis. Just like hashes, two identical strings passed through Hemoji will produce the same result.
 
 This library is not intended to replace traditional hashing functions as collision are more likely, due to the reduced amount of different emojis available (depending on the length). On the other hand, it does provide more possibilities than alphanumeric characters for its length, making it more convenient to compare two pieces of information where it would not be possible to do so programmatically. Examples would include oral confirmation between two people or self confirmation in separate contexts (for example: hardware <-> software | software A <-> Software B).
 

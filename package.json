@@ -1,16 +1,25 @@
 {
   "name": "hemoji",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visual hashing using emojis",
+  "type": "module",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require":  "./dist/index.js",
+      "default": "./dist/index.esm.js"
+    }
+  },
   "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "npm run build:clean && npm run build:lib && npm run build:types",
+    "build": "npm run build:clean && npm run build:cjs && npm run build:mjs && npm run build:types",
     "build:clean": "rimraf ./dist/",
-    "build:lib": "esbuild src/index.ts --bundle --minify --outdir=./dist/",
+    "build:cjs": "esbuild src/index.ts --bundle --minify --format=cjs --outfile=./dist/index.js",
+    "build:mjs": "esbuild src/index.ts --bundle --minify --format=esm --outfile=./dist/index.esm.js",
     "build:types": "cp ./src/index.d.ts ./dist/index.d.ts",
     "type-check": "tsc",
     "lint": "eslint src/**/*",
