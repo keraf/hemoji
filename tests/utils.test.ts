@@ -12,10 +12,10 @@ describe('hexToEmoji', () => {
 
 describe('splitStringInChunks', () => {
     it('works', () => {
-        expect(splitStringInChunks('test', 1)).toEqual(['t', 'e', 's', 't']);
+        expect(splitStringInChunks('test', 4)).toEqual(['t', 'e', 's', 't']);
+        expect(splitStringInChunks('test', 3)).toEqual(['t', 'e', 'st']);
         expect(splitStringInChunks('test', 2)).toEqual(['te', 'st']);
-        expect(splitStringInChunks('test', 3)).toEqual(['tes', 't']);
-        expect(splitStringInChunks('test', 4)).toEqual(['test']);
+        expect(splitStringInChunks('test', 1)).toEqual(['test']);
     });
 });
 

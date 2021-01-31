@@ -1,14 +1,22 @@
 import emojis, { Version } from './emojis';
 
 /**
- * Split a string in chunks of a given size
+ * Split a string in a given number chunks
  * @param {string} str - Source string
- * @param {number} size - Size of the chunk
+ * @param {number} size - Number of chunks
  * @returns {string[]} - Chunks
  */
-export const splitStringInChunks = (str: string, size = 16): string[] => {
-    const re = new RegExp('.{1,' + size + '}', 'g');
-    return [...str.match(re)];
+export const splitStringInChunks = (str: string, num = 4): string[] => {
+    let pos = 0;
+    const chunks = [];
+    const size = Math.floor(str.length / num);
+    for (let i = 0; i < num; i++) {
+        const end = i === num - 1 ? undefined : pos + size;
+        chunks.push(str.slice(pos, end));
+        pos = end;
+    }
+
+    return chunks;
 };
 
 /**

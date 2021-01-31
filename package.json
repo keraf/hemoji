@@ -1,6 +1,6 @@
 {
   "name": "hemoji",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Visual hashing using emojis",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

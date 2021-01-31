@@ -36,9 +36,9 @@ const hemoji = require('hemoji');
 
 And use it!
 ```javaScript
-console.log(hemoji('hemoji')); // 🕶️ 🉑 🇼 🛵 🥘 🟡
-console.log(hemoji('Hello world', { length: 8 })); // 🆕 ⛴️ 😠 🚾 🗳️ ⚪ 💀 😢
-console.log(hemoji('Hello world', { length: 4 })); // 🚍 😌 🌏 🈯
+console.log(hemoji('hemoji')); // 🪕 🎶 🦒 🎠 💝 🌗
+console.log(hemoji('Hello world', { length: 8 })); // 🎟️ 🍤 🕌 🟦 📛 🔹 🔪 🚝
+console.log(hemoji('Hello world', { length: 4 })); // 📌 🧾 ➿ 🥌
 ```
 
 The first parameter is the string you wish to hash. The second (optional) parameter is an options object.
