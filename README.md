@@ -1,25 +1,21 @@
-<center>
-
 # Hemoji
-## Turn a string into a visual hash made of emojis ⏮️ 📁 👾 🍐
+## A visual hashing library with Emojis 🪁 ⛓️ 🌐 🚜 
 ![Version](https://img.shields.io/npm/v/hemoji) ![Downloads](https://img.shields.io/npm/dt/hemoji) ![License](https://img.shields.io/npm/l/hemoji) ![Issues](https://img.shields.io/github/issues-raw/keraf/hemoji) ![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/hemoji)
 
 [![Hemoji on NPM](https://nodei.co/npm/hemoji.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/hemoji)
 
-</center>
+Hemoji is a small single function JavaScript/TypeScript library that hashes a string into a sequence of emojis. Just like hashes, two identical strings passed through Hemoji will produce the same result.
 
-Hemoji is a small library to turn strings into a hash of emojis. Just like hashes, two identical strings passed through Hemoji will produce the same result.
+This library is not intended to replace traditional hashing functions as collision are more likely. But as it provides more possibilities than alphanumeric characters for its length, it makes it a more convenient method to compare two pieces of information where it would not be possible, practical or secure to do so programmatically. Examples would include oral confirmation between two people or self confirmation in separate contexts, i.e., across separate devices.
 
-This library is not intended to replace traditional hashing functions as collision are more likely, due to the reduced amount of different emojis available (depending on the length). On the other hand, it does provide more possibilities than alphanumeric characters for its length, making it more convenient to compare two pieces of information where it would not be possible to do so programmatically. Examples would include oral confirmation between two people or self confirmation in separate contexts (for example: hardware <-> software | software A <-> Software B).
-
-You can try Hemoji online or continue reading on how to use it.
+You can [try Hemoji online](https://hemoji.ker.af/) or continue reading on how to use it.
 
 _This is inspired by Telegram's [emoji key verification feature](https://telegram.org/blog/calls#secure) on calls._
 
 ## Getting started
 Install the library using NPM:
 ```
-npm i --save hemoji
+npm i hemoji
 ```
 
 Or Yarn:
@@ -31,17 +27,17 @@ The library exports a single function (as default):
 ```javaScript
 import hemoji from 'hemoji';
 // OR
-const hemoji = require('hemoji');
+const hemoji = require('hemoji').default;
 ```
 
 And use it!
 ```javaScript
-console.log(hemoji('hemoji')); // 🪕 🎶 🦒 🎠 💝 🌗
-console.log(hemoji('Hello world', { length: 8 })); // 🎟️ 🍤 🕌 🟦 📛 🔹 🔪 🚝
-console.log(hemoji('Hello world', { length: 4 })); // 📌 🧾 ➿ 🥌
+hemoji('hemoji'); // 🪕 🎶 🦒 🎠 💝 🌗
+hemoji('Hello world', { length: 8 }); // 🎟️ 🍤 🕌 🟦 📛 🔹 🔪 🚝
+hemoji('Hello world', { length: 4 }); // 📌 🧾 ➿ 🥌
 ```
 
-The first parameter is the string you wish to hash. The second (optional) parameter is an options object.
+The first parameter is the string you wish to hash. The second (optional) parameter is an options object (see below).
 
 ### Options
 | Name | Type | Description | Default Value |
